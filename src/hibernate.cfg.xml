@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+   		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/STOCKDB</property> <!-- BD Mane -->
+   		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+   		<property name="hibernate.connection.username">postgres</property> <!-- DB User -->
+   		<property name="hibernate.connection.password">root</property> <!-- DB Password -->
+   		
+   		
+   		<property name="hibernate.hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+		<property name="hibernate.show_sql">true</property> <!-- Show SQL in console -->
+		<mapping class="com.omerfpekgoz.stok.project.models.Category"/>
+		<mapping class="com.omerfpekgoz.stok.project.models.Customer"/>
+		<mapping class="com.omerfpekgoz.stok.project.models.Products"/>
+		<mapping class="com.omerfpekgoz.stok.project.models.Sales"/>
+		<mapping class="com.omerfpekgoz.stok.project.models.Staff"/>
+		<mapping class="com.omerfpekgoz.stok.project.models.Stock"/>
+	
+		
+		
+	</session-factory>
+</hibernate-configuration>
